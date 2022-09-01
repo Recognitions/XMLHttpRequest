@@ -1,3 +1,5 @@
+import {pages} from "./pages.js"
+
 function load(file){
     var http = new XMLHttpRequest();
     http.onload = ()=>{
@@ -7,11 +9,7 @@ function load(file){
     http.send()
 }
 
-const pages = [
-    "inicio",
-    "cadastro",
-    "login"
-]
+
 pages.forEach((page)=>{
     const button = document.createElement("button")
     button.innerText=page
