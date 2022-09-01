@@ -9,12 +9,13 @@ function load(file){
     http.send()
 }
 
-
-pages.forEach((page)=>{
-    const button = document.createElement("button")
-    button.innerText=page
-    document.querySelector("header").appendChild(button)
-    button.addEventListener("click",()=>{
-        load(page)
+document.addEventListener("DOMContentLoaded",()=>{
+    pages.forEach((page)=>{
+        const button = document.createElement("button")
+        button.innerText=page
+        document.querySelector("header").appendChild(button)
+        button.addEventListener("click",()=>{
+            load(page)
+        })
     })
 })
